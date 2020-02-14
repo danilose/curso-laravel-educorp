@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "02a2da6cfa7032ec03a875ed8fa25455",
-    "content-hash": "3bb4dacacf43532a01bf1d3d6dd3bbe1",
+    "hash": "67b18c03846b3e46a642c72257a7e822",
+    "content-hash": "e3fdb03d05df8135577c2c704a6d953a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1459,6 +1459,68 @@
                 "uuid"
             ],
             "time": "2019-12-17 08:18:51"
+        },
+        {
+            "name": "spatie/laravel-web-tinker",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-web-tinker.git",
+                "reference": "ba84d4334e340163dcee046aca482511c83eeaee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-web-tinker/zipball/ba84d4334e340163dcee046aca482511c83eeaee",
+                "reference": "ba84d4334e340163dcee046aca482511c83eeaee",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cookie": "^5.8|^6.0",
+                "illuminate/session": "^5.8|^6.0",
+                "illuminate/support": "^5.8|^6.0",
+                "laravel/tinker": "^1.0|^2.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.8|^4.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\WebTinker\\WebTinkerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\WebTinker\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Artisan Tinker in your browser",
+            "homepage": "https://github.com/spatie/laravel-web-tinker",
+            "keywords": [
+                "Tinker",
+                "debug",
+                "development",
+                "laravel",
+                "spatie",
+                "web-tinker"
+            ],
+            "time": "2019-12-03 08:57:47"
         },
         {
             "name": "swiftmailer/swiftmailer",
