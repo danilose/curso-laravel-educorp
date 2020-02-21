@@ -17,7 +17,7 @@ class CreateSalasTable extends Migration
 
             $table->bigIncrements('id');
             $table->string('nome')->nullable(); // nullable -> permite valor nulo padrão NULL
-            $table->integer('ativo')->default(1)->comment = '0 = desativado e 1 = ativado'; // default -> define valor inicial
+            $table->integer('ativo')->default(1)->comment('0 = desativado e 1 = ativado'); // default -> define valor inicial
             $table->integer('qtdAlunos')->nullable();
 
             $table->integer('projetor')->nullable(0); // nullable -> permite valor nulo mas o padrão será 0
