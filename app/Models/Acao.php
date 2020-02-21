@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Professor extends Model
+class Acao extends Model
 {
     //
-    static $table = 'professores';
+    static $table = 'acoes';
 }
