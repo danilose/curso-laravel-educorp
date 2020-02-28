@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/nome', function() {
     return 'Danilo';
@@ -52,3 +52,8 @@ Route::get('/limpar-cache', function() {
     Artisan::call('cache:clear');
     return "Cache foi limpo!";
 });
+
+Route::get('/nova', function() {
+    return view('home');
+});
+
