@@ -57,3 +57,8 @@ Route::get('/nova', function() {
     return view('home');
 });
 
+Route::get('salas', 'SalaController@index');
+Route::get('salas/create', 'SalaController@create');
+Route::post('salas','SalaController@store');
+Route::get('salas/{sala}', 'SalaController@show');
+Route::get('salas/edit', 'SalaController@edit');

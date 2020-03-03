@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Sala;
 
 class SalaSeeder extends Seeder
 {
@@ -12,5 +13,6 @@ class SalaSeeder extends Seeder
     public function run()
     {
         //
+        factory(Sala::class, 50)->create()->make();
     }
 }

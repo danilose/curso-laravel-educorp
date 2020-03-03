@@ -15,6 +15,8 @@ class SalaController extends Controller
     public function index()
     {
         //
+        $salas = Sala::all();
+        return view('salas.index', compact('salas'));
     }
 
     /**
@@ -25,6 +27,7 @@ class SalaController extends Controller
     public function create()
     {
         //
+        return view('salas.create');
     }
 
     /**
@@ -36,6 +39,14 @@ class SalaController extends Controller
     public function store(Request $request)
     {
         //
+        $sala = new Sala();
+        $sala->nome = $request['nome'];
+        $sala->qtdAlunos = $request['qtdAlunos'];
+        $sala->save();
+        
+        //Sala::create($request->except('_token'));
+        
+        return redirect('salas');
     }
 
     /**
@@ -47,6 +58,7 @@ class SalaController extends Controller
     public function show(Sala $sala)
     {
         //
+        return view('salas.show', compact('sala'));
     }
 
     /**
