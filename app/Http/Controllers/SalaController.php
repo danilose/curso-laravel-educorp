@@ -70,6 +70,7 @@ class SalaController extends Controller
     public function edit(Sala $sala)
     {
         //
+        return view('salas.edit', compact('sala'));
     }
 
     /**
@@ -82,6 +83,8 @@ class SalaController extends Controller
     public function update(Request $request, Sala $sala)
     {
         //
+        $sala->update($request->except('_token'));
+        return redirect('salas/' . $sala->id);
     }
 
     /**
@@ -93,5 +96,7 @@ class SalaController extends Controller
     public function destroy(Sala $sala)
     {
         //
+        $sala->delete();
+        return redirect('salas');
     }
 }

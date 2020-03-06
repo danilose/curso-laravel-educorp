@@ -1,32 +1,44 @@
-<div class="row">
-    <div class="col-12">
-        <h1>Salas</h1>
-        <p><a href="salas/create">Adicionar nova sala</a></p>
-    </div>
-</div>
+@extends('adminlte::page')
 
-<h3>Lista de salas - {{count($salas)}}</h3>
+@section('title', 'Lista de salas')
 
-<table>
+@section('content_header')
+    <h1>
+        Salas - Qtde: {{count($salas)}}
+        <a href="salas/create" class="btn btn-warning">Adicionar nova sala</a>
+    </h1>
+@stop
 
-    <tr>
-        <td>Código</td>
-        <td>Nome</td>
-        <td>Quantidade alunos</td>
-    </tr>
-    
-    @forelse($salas as $s)
-    
+@section('content')
+    <table class="table table-bordered table-hover">
+
         <tr>
-            
-            <td> {{ $s->id }} </td>
-            <td><a href="/salas/{{ $s->id }}"> {{ $s->nome }} </a></td>
-            <td> {{ $s->qtdAlunos }} </td>
-            
+            <td>Código</td>
+            <td>Nome</td>
+            <td>Quantidade alunos</td>
         </tr>
+        
+        @forelse($salas as $s)
+        
+            <tr>
+                
+                <td> {{ $s->id }} </td>
+                <td><a href="/salas/{{ $s->id }}"> {{ $s->nome }} </a></td>
+                <td> {{ $s->qtdAlunos }} </td>
+                
+            </tr>
+        
+        @empty
+            Não há salas
+        @endforelse
     
-    @empty
-        Não há salas
-    @endforelse
+    </table>
+@stop
 
-</table>
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
