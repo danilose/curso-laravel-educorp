@@ -5253,5 +5253,102 @@
             "laravel",
             "lpm"
         ]
+    },
+    {
+        "name": "almasaeed2010/adminlte",
+        "version": "v3.0.2",
+        "version_normalized": "3.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ColorlibHQ/AdminLTE.git",
+            "reference": "0e48302342e9c04174ed73902b08324d47d4e792"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/0e48302342e9c04174ed73902b08324d47d4e792",
+            "reference": "0e48302342e9c04174ed73902b08324d47d4e792",
+            "shasum": ""
+        },
+        "time": "2020-01-17 08:05:37",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Colorlib"
+            }
+        ],
+        "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 4",
+        "homepage": "http://adminlte.io/",
+        "keywords": [
+            "JS",
+            "admin",
+            "back-end",
+            "css",
+            "less",
+            "responsive",
+            "template",
+            "theme",
+            "web"
+        ]
+    },
+    {
+        "name": "jeroennoten/laravel-adminlte",
+        "version": "v3.0.9",
+        "version_normalized": "3.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
+            "reference": "ee4cde0f651d2f3ce94351f294197c9949c6c1af"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/ee4cde0f651d2f3ce94351f294197c9949c6c1af",
+            "reference": "ee4cde0f651d2f3ce94351f294197c9949c6c1af",
+            "shasum": ""
+        },
+        "require": {
+            "almasaeed2010/adminlte": "^3.0",
+            "laravel/framework": ">=6.0",
+            "php": ">=7.2.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^8.3"
+        },
+        "time": "2020-03-04 07:26:48",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "JeroenNoten\\LaravelAdminLte\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jeroen Noten",
+                "email": "jeroennoten@me.com"
+            }
+        ],
+        "description": "Easy AdminLTE integration with Laravel",
+        "keywords": [
+            "AdminLTE",
+            "admin",
+            "administrator",
+            "laravel"
+        ]
     }
 ]

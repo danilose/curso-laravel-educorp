@@ -1,23 +1,38 @@
-<div class="row">
-    <h1>Adicionar sala</h1>
-</div>
+@extends('adminlte::page')
 
-<hr>
+@section('title', 'Adicionar sala')
 
-<div class="row">
-    <form action="/salas" method="post">
-        @csrf
+@section('content_header')
+    <h1>
+        Adicionar sala
+        <a href="/salas" class="btn btn-info">Voltar</a>
+    </h1>
+@stop
 
-        <p>
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome">
-        </p>
+@section('content')
+    <div class="row">
+        <form action="/salas" method="post">
+            @csrf
 
-        <p>
-            <label for="qtdAlunos">Quantidade alunos:</label>
-            <input type="text" name="qtdAlunos">
-        </p>
-        
-        <button type="submit">Criar sala</button>
-    </form>
-</div>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome">
+            </p>
+
+            <p>
+                <label for="qtdAlunos">Quantidade alunos:</label>
+                <input type="text" name="qtdAlunos">
+            </p>
+            
+            <button type="submit" class="btn btn-success">Criar sala</button>
+        </form>
+    </div>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
