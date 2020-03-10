@@ -16,8 +16,8 @@ class SalaController extends Controller
     public function index()
     {
         //
-        //$salas = Sala::all();
-        $salas = DB::table('salas')->get();
+        // retornará 15 salas
+        $salas = Sala::paginate(5);
 
         return view('salas.index', compact('salas'));
     }
