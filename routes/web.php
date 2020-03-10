@@ -67,3 +67,9 @@ Route::patch('salas/{sala}','SalaController@update');
 Route::delete('salas/{sala}','SalaController@destroy');
 */
 Route::resource('salas', 'SalaController');
+
+Auth::routes([
+    'register' => false, // desabilita a rota register
+    ]);
+
+Route::get('/home', 'HomeController@index')->name('home');

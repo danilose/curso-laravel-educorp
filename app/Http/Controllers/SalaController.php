@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sala;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SalaController extends Controller
 {
@@ -15,7 +16,9 @@ class SalaController extends Controller
     public function index()
     {
         //
-        $salas = Sala::all();
+        // retornará 15 salas
+        $salas = Sala::paginate(5);
+
         return view('salas.index', compact('salas'));
     }
 

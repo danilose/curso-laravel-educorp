@@ -10,6 +10,9 @@
 @stop
 
 @section('content')
+    
+    {{ $salas->links() }}
+    
     <table class="table table-bordered table-hover">
 
         <tr>
@@ -33,6 +36,9 @@
         @endforelse
     
     </table>
+    
+    {{ $salas->links() }}
+
 @stop
 
 @section('css')
